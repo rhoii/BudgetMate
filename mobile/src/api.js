@@ -1,13 +1,20 @@
-// src/api.js
 import axios from "axios";
 import { Platform } from "react-native";
+import Constants from "expo-constants";
 
-// Choose the correct baseURL depending on where the app is running
+// Pull values from app.json (expo.extra)
+const {
+  WEB_API_URL,
+  IOS_API_URL,
+  ANDROID_API_URL,
+  DEFAULT_API_URL,
+} = Constants.expoConfig.extra;
+
 const baseURL = Platform.select({
-  web: "http://localhost:5000",     // Expo Web (browser)
-  ios: "http://175.176.85.226:5000",     // iOS simulator
-  android: "http://175.176.85.226:5000",  // Android emulator
-  default: "http://175.176.85.226:5000",
+  web: WEB_API_URL,
+  ios: IOS_API_URL,
+  android: ANDROID_API_URL,
+  default: DEFAULT_API_URL,
 });
 
 console.log("API baseURL =", baseURL);
@@ -16,6 +23,7 @@ export const api = axios.create({
   baseURL,
 });
 
+// ✅ All requests will now hit /api/auth/... correctly
 api.interceptors.request.use((config) => {
   if (global.authToken) {
     config.headers.Authorization = `Bearer ${global.authToken}`;
