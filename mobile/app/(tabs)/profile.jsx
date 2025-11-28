@@ -1,15 +1,5 @@
 import React, { useState, useCallback } from "react";
-import { 
-    SafeAreaView, 
-    View, 
-    ScrollView, 
-    Image, 
-    Text, 
-    TouchableOpacity, 
-    StyleSheet,
-    Dimensions,
-    Modal 
-} from "react-native";
+import { SafeAreaView, View, ScrollView, Image, Text, TouchableOpacity, StyleSheet, Dimensions, Modal } from "react-native";
 import { StatusBar } from 'expo-status-bar';
 import { LinearGradient } from 'expo-linear-gradient';
 import { scale, verticalScale, moderateScale } from '../../src/responsive';
