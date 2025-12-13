@@ -29,7 +29,7 @@ export default function TabsLayout() {
       }}
     >
       <Tabs.Screen
-        name="home/index"
+        name="home"
         options={{
           title: "Home",
           tabBarIcon: ({ color, focused }) => (
@@ -41,7 +41,7 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="learn/index"
+        name="learn"
         options={{
           title: "Learn",
           tabBarIcon: ({ color, focused }) => (
@@ -53,7 +53,7 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="earn/index"
+        name="earn"
         options={{
           title: "Earn",
           tabBarIcon: ({ color, focused }) => (
@@ -65,7 +65,7 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="community/index"
+        name="community"
         options={{
           title: "Community",
           tabBarIcon: ({ color, focused }) => (
@@ -77,7 +77,7 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="profile/index"
+        name="profile"
         options={{
           title: "Profile",
           tabBarIcon: ({ color, focused }) => (
