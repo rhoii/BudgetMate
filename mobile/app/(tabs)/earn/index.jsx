@@ -9,7 +9,7 @@ import { useFocusEffect } from 'expo-router';
 import { LinearGradient } from 'expo-linear-gradient';
 import JobCard from '../../../src/components/JobCard';
 import EarningsChart from '../../../src/components/budget/EarningsChart';
-import { styles, COLORS } from './styles';
+import { styles, COLORS } from '../../styles/earnStyles';
 
 const JOBS = [
     {

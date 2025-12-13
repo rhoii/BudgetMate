@@ -6,7 +6,7 @@ import { useRouter } from 'expo-router';
 import { MaterialIcons } from '@expo/vector-icons';
 import ResourceCard from '../../../src/components/ResourceCard';
 import { fetchArticles } from '../../../src/api/api';
-import { styles, COLORS } from './styles';
+import { styles, COLORS } from '../../styles/learnStyles';
 
 const Learn = () => {
     const router = useRouter();

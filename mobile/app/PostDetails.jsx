@@ -6,7 +6,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { api } from '../src/api/api';
-import { COLORS } from './(tabs)/community/styles';
+import { COLORS } from './styles/communityStyles';
 
 const PostDetails = () => {
     const router = useRouter();

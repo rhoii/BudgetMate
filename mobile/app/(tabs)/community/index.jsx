@@ -6,7 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { moderateScale, scale, verticalScale } from '../../../src/utils/responsive';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { api } from '../../../src/api/api';
-import { styles, COLORS } from './styles';
+import { styles, COLORS } from '../../styles/communityStyles';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const CATEGORIES = [

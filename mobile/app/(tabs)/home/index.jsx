@@ -10,7 +10,7 @@ import HeroCard from '../../../src/components/budget/HeroCard';
 import GoalCard from '../../../src/components/budget/GoalCard';
 import SpendingChart from '../../../src/components/budget/SpendingChart';
 import TransactionCard from '../../../src/components/expense/TransactionCard';
-import { styles, COLORS } from './styles';
+import { styles, COLORS } from '../../styles/homeStyles';
 
 const Home = () => {
   const router = useRouter();

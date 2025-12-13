@@ -7,7 +7,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 import { api } from '../../../src/api/api';
-import { styles, COLORS } from './styles';
+import { styles, COLORS } from '../../styles/profileStyles';
 
 const MenuItem = ({ icon, label, value, onPress, isDestructive = false }) => (
   <TouchableOpacity style={styles.menuItem} onPress={onPress} activeOpacity={0.7}>
