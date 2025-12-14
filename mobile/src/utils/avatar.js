@@ -51,7 +51,8 @@ export const getDiceBearAvatar = (seed, style = AVATAR_STYLES.ADVENTURER_NEUTRAL
         seed = Math.random().toString(36).substring(2, 15);
     }
 
-    return `https://api.dicebear.com/9.x/${style}/svg?seed=${encodeURIComponent(seed)}&size=${size}`;
+    // Using PNG format instead of SVG for React Native Image component compatibility
+    return `https://api.dicebear.com/9.x/${style}/png?seed=${encodeURIComponent(seed)}&size=${size}`;
 };
 
 /**
@@ -71,5 +72,15 @@ export const generateRandomSeed = () => {
  */
 export const getUserAvatar = (user, style = AVATAR_STYLES.ADVENTURER_NEUTRAL, size = 200) => {
     const seed = user?.avatarSeed || user?.email || user?.name || generateRandomSeed();
-    return getDiceBearAvatar(seed, style, size);
+    const avatarUrl = getDiceBearAvatar(seed, style, size);
+
+    console.log('🎨 Avatar Debug:', {
+        avatarSeed: user?.avatarSeed,
+        email: user?.email,
+        name: user?.name,
+        finalSeed: seed,
+        avatarUrl: avatarUrl
+    });
+
+    return avatarUrl;
 };

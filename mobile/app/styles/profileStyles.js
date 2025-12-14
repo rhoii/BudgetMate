@@ -48,9 +48,9 @@ export const styles = StyleSheet.create({
         borderColor: COLORS.yellow,
     },
     avatarImage: {
-        width: '70%',
-        height: '70%',
-        tintColor: COLORS.yellow,
+        width: '100%',
+        height: '100%',
+        borderRadius: moderateScale(45),
     },
     name: {
         fontSize: moderateScale(22),
